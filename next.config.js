@@ -1,0 +1,20 @@
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+const isProductionMode = process.env.NODE_ENV === 'production'
+const packageVersion = process.env.npm_package_version
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    removeConsole: isProductionMode ? { exclude: ['error', 'warn'] } : false,
+  },
+  env: {
+    APP_VERSION: isProductionMode ? packageVersion : `${packageVersion}-${process.env.NODE_ENV}`,
+  },
+}
+
+module.exports = withBundleAnalyzer(nextConfig)
