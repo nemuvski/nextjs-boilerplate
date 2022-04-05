@@ -1,5 +1,5 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: process.env.ANALYZE === 'true'
 })
 
 const isProductionMode = process.env.NODE_ENV === 'production'
@@ -10,7 +10,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
-    removeConsole: isProductionMode ? { exclude: ['error', 'warn'] } : false,
+    removeConsole: isProductionMode ? { exclude: ['error', 'warn'] } : false
   },
   env: {
     APP_VERSION: isProductionMode ? packageVersion : `${packageVersion}-${process.env.NODE_ENV}`
