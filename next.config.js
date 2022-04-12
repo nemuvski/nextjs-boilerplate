@@ -9,6 +9,7 @@ const packageVersion = process.env.npm_package_version
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  poweredByHeader: false,
   compiler: {
     removeConsole: isProductionMode ? { exclude: ['error', 'warn'] } : false
   },
