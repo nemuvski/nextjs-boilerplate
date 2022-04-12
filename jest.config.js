@@ -15,7 +15,7 @@ const customJestConfig = {
   },
 
   // テストの共通設定等のセットアップ用スクリプト
-  setupFiles: ['<rootDir>/jest.setup.ts'],
+  // setupFiles: ['<rootDir>/jest.setup.ts'],
 
   // 対象とするテストコードのパスパターン
   testMatch: [
