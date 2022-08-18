@@ -18,10 +18,7 @@ const customJestConfig = {
   // setupFiles: ['<rootDir>/jest.setup.ts'],
 
   // 対象とするテストコードのパスパターン
-  testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.spec.ts',
-    '<rootDir>/src/**/__tests__/**/*.spec.tsx',
-  ],
+  testMatch: ['<rootDir>/src/**/__tests__/**/*.spec.ts', '<rootDir>/src/**/__tests__/**/*.spec.tsx'],
 
   testEnvironment: 'jsdom',
 }
