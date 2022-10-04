@@ -1,7 +1,11 @@
-import { NextPage } from 'next'
 import Head from 'next/head'
+import type { NextPageWithLayout } from '~/types/next'
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
+  return <div>It works!</div>
+}
+
+Home.getLayout = (page) => {
   return (
     <>
       <Head>
@@ -13,7 +17,7 @@ const Home: NextPage = () => {
         <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
       </Head>
 
-      <div>It works!</div>
+      <main>{page}</main>
     </>
   )
 }
