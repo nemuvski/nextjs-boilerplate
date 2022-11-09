@@ -1,8 +1,9 @@
 module.exports = {
-  plugins: ['regexp'],
+  plugins: ['regexp', '@typescript-eslint/eslint-plugin'],
   extends: ['next', 'next/core-web-vitals', 'plugin:regexp/recommended', 'prettier'],
   rules: {
     '@next/next/no-img-element': 'off',
+    '@typescript-eslint/consistent-type-imports': 'error',
     'import/order': [
       'warn',
       {
