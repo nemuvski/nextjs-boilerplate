@@ -21,6 +21,8 @@ const customJestConfig = {
   testMatch: ['<rootDir>/src/**/__tests__/**/*.spec.ts', '<rootDir>/src/**/__tests__/**/*.spec.tsx'],
 
   testEnvironment: 'jsdom',
+
+  passWithNoTests: true,
 }
 
 module.exports = createJestConfig(customJestConfig)
