@@ -33,6 +33,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+next-env.d.ts
 
 # config for IDE/Editor
 /.idea/
