@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import type { FC, PropsWithChildren } from 'react'
 
 /**
@@ -8,10 +8,6 @@ export const metadata: Metadata = {
   title: { absolute: 'Next App', template: '%s | Next App' },
   description: 'Next App',
   generator: null,
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
   formatDetection: {
     telephone: false,
     email: false,
@@ -19,6 +15,14 @@ export const metadata: Metadata = {
   },
   robots: { index: false, follow: false },
   icons: [{ rel: 'icon', type: 'image/svg+xml', url: '/favicon.svg' }],
+}
+
+/**
+ * @see https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ */
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
